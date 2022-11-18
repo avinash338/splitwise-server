@@ -1,0 +1,220 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "splitwise",
+  "dateExported": "2022-11-12T21:00:35.590Z",
+  "version": "1.1",
+  "folders": [
+    {
+      "_id": "47ad9857-5f5d-40b7-9c64-8408c1264b1e",
+      "name": "Groups",
+      "containerId": "",
+      "created": "2022-11-12T17:31:14.686Z",
+      "sortNum": 10000
+    },
+    {
+      "_id": "cc83f00d-e0e2-4f15-b9e9-8882a73b8b8c",
+      "name": "Users",
+      "containerId": "",
+      "created": "2022-11-12T17:31:47.738Z",
+      "sortNum": 20000
+    },
+    {
+      "_id": "6dd6c241-28fd-42c6-a9c6-b2a3ec2e5210",
+      "name": "Expenses",
+      "containerId": "",
+      "created": "2022-11-12T17:31:57.605Z",
+      "sortNum": 30000
+    }
+  ],
+  "requests": [
+    {
+      "_id": "8ff7ac75-b6ea-492e-8575-02ca2e797042",
+      "colId": "aa82c7b4-0f35-474f-8b47-63060d1c49f3",
+      "containerId": "cc83f00d-e0e2-4f15-b9e9-8882a73b8b8c",
+      "name": "User signup",
+      "url": "{{baseurl}}/users/register",
+      "method": "POST",
+      "sortNum": 10000,
+      "created": "2022-11-12T11:38:11.328Z",
+      "modified": "2022-11-12T17:32:06.501Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n    \"name\": \"Avinash1\",\n    \"email\": \"avinashgajulapalli1@gmail.com\",\n    \"password\": \"Pega@123\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "2175d342-df8f-409b-b3ee-d1d5f26e1db1",
+      "colId": "aa82c7b4-0f35-474f-8b47-63060d1c49f3",
+      "containerId": "cc83f00d-e0e2-4f15-b9e9-8882a73b8b8c",
+      "name": "User signin",
+      "url": "{{baseurl}}/auth/login",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2022-11-12T11:40:05.763Z",
+      "modified": "2022-11-12T17:32:11.858Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n    \"email\": \"avinashgajulapalli1@gmail.com\",\n    \"password\": \"Pega@1234\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "b29ac6dc-e7c0-49ec-bc77-5d6121387879",
+      "colId": "aa82c7b4-0f35-474f-8b47-63060d1c49f3",
+      "containerId": "cc83f00d-e0e2-4f15-b9e9-8882a73b8b8c",
+      "name": "Get Users",
+      "url": "{{baseurl}}/users",
+      "method": "GET",
+      "sortNum": 30000,
+      "created": "2022-11-12T11:42:05.462Z",
+      "modified": "2022-11-12T17:32:13.738Z",
+      "headers": [{ "name": "Token", "value": "{{token}}" }],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "d6a01848-114f-4647-b0a1-1e34cec3eb55",
+      "colId": "aa82c7b4-0f35-474f-8b47-63060d1c49f3",
+      "containerId": "cc83f00d-e0e2-4f15-b9e9-8882a73b8b8c",
+      "name": "Reset password",
+      "url": "{{baseurl}}/auth/resetPassword",
+      "method": "POST",
+      "sortNum": 60000,
+      "created": "2022-11-12T11:52:15.988Z",
+      "modified": "2022-11-12T17:32:21.872Z",
+      "headers": [{ "name": "Token", "value": "{{token}}" }],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n    \"email\": \"avinashgajulapalli1@gmail.com\",\n    \"password\": \"Pega@1234\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "d98da6d0-2c26-4095-a0c5-d853c791cf61",
+      "colId": "aa82c7b4-0f35-474f-8b47-63060d1c49f3",
+      "containerId": "47ad9857-5f5d-40b7-9c64-8408c1264b1e",
+      "name": "Get groups",
+      "url": "{{baseurl}}/groups",
+      "method": "GET",
+      "sortNum": 80000,
+      "created": "2022-11-12T17:32:55.383Z",
+      "modified": "2022-11-12T17:33:15.137Z",
+      "headers": [{ "name": "Token", "value": "{{token}}" }],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "822e9410-d5e6-468b-a9bb-76526713bb4c",
+      "colId": "aa82c7b4-0f35-474f-8b47-63060d1c49f3",
+      "containerId": "47ad9857-5f5d-40b7-9c64-8408c1264b1e",
+      "name": "Add Group",
+      "url": "{{baseurl}}/groups",
+      "method": "POST",
+      "sortNum": 90000,
+      "created": "2022-11-12T17:33:25.747Z",
+      "modified": "2022-11-12T19:22:46.394Z",
+      "headers": [{ "name": "Token", "value": "{{token}}" }],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\": \"kashmir trip1\",\n  \"members\": [\n    \"Avinash\",\n    \"Akash\",\n    \"Srikar\",\n    \"Supriya\"\n  ]\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "ca23dc87-8be3-4875-a7ac-71be6b3c667d",
+      "colId": "aa82c7b4-0f35-474f-8b47-63060d1c49f3",
+      "containerId": "47ad9857-5f5d-40b7-9c64-8408c1264b1e",
+      "name": "Update Group",
+      "url": "{{baseurl}}/groups/kashmir trip1",
+      "method": "POST",
+      "sortNum": 100000,
+      "created": "2022-11-12T17:45:59.512Z",
+      "modified": "2022-11-12T19:24:49.076Z",
+      "headers": [{ "name": "Token", "value": "{{token}}" }],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\": \"kashmir trip1\",\n  \"members\": [\n    \"Avinash\",\n    \"Akash\",\n    \"Srikar\"\n  ]\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "c920313e-43f3-4318-b79f-38d5978aef0f",
+      "colId": "aa82c7b4-0f35-474f-8b47-63060d1c49f3",
+      "containerId": "6dd6c241-28fd-42c6-a9c6-b2a3ec2e5210",
+      "name": "Add Expense",
+      "url": "{{baseurl}}/expenses",
+      "method": "POST",
+      "sortNum": 110000,
+      "created": "2022-11-12T18:22:18.767Z",
+      "modified": "2022-11-12T19:05:00.790Z",
+      "headers": [{ "name": "Token", "value": "{{token}}" }],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"description\": \"Lunch4\",\n  \"loanAmount\": 375,\n  \"paidBy\": {\n    \"name\": \"Akash\",\n    \"amount\": 400\n  },\n  \"transactions\": [\n    {\n      \"name\": \"Avinash\",\n      \"amount\": 100\n    },\n    {\n      \"name\": \"Akash\",\n      \"amount\": 100\n    },\n    {\n      \"name\": \"Srikar\",\n      \"amount\": 100\n    },\n    {\n      \"name\": \"Suppi\",\n      \"amount\": 100\n    }\n  ]\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "593719bf-e412-4814-9207-a5337910a098",
+      "colId": "aa82c7b4-0f35-474f-8b47-63060d1c49f3",
+      "containerId": "6dd6c241-28fd-42c6-a9c6-b2a3ec2e5210",
+      "name": "Get Expenses",
+      "url": "{{baseurl}}/expenses",
+      "method": "GET",
+      "sortNum": 120000,
+      "created": "2022-11-12T18:29:42.703Z",
+      "modified": "2022-11-12T18:29:58.697Z",
+      "headers": [{ "name": "Token", "value": "{{token}}" }],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "8e974488-7eb3-4c92-8905-10b044dc462a",
+      "colId": "aa82c7b4-0f35-474f-8b47-63060d1c49f3",
+      "containerId": "6dd6c241-28fd-42c6-a9c6-b2a3ec2e5210",
+      "name": "Update Expense",
+      "url": "{{baseurl}}/expenses/Lunch2",
+      "method": "PUT",
+      "sortNum": 130000,
+      "created": "2022-11-12T18:44:16.649Z",
+      "modified": "2022-11-12T19:01:59.365Z",
+      "headers": [{ "name": "Token", "value": "{{token}}" }],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"description\": \"Lunch2\",\n  \"loanAmount\": 375,\n  \"paidBy\": {\n    \"name\": \"Akash\",\n    \"amount\": 400\n  },\n  \"transactions\": [\n    {\n      \"name\": \"Avinash\",\n      \"amount\": 100\n    },\n    {\n      \"name\": \"Akash\",\n      \"amount\": 100\n    },\n    {\n      \"name\": \"Srikar\",\n      \"amount\": 100\n    },\n    {\n      \"name\": \"Suppi\",\n      \"amount\": 100\n    }\n  ]\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "da5e9dc5-2162-44aa-a591-bb89f06ec4cb",
+      "colId": "aa82c7b4-0f35-474f-8b47-63060d1c49f3",
+      "containerId": "6dd6c241-28fd-42c6-a9c6-b2a3ec2e5210",
+      "name": "Delete Expense",
+      "url": "{{baseurl}}/expenses/Lunch3",
+      "method": "DELETE",
+      "sortNum": 140000,
+      "created": "2022-11-12T18:44:26.455Z",
+      "modified": "2022-11-12T18:47:29.155Z",
+      "headers": [{ "name": "Token", "value": "{{token}}" }],
+      "params": [],
+      "tests": []
+    }
+  ]
+}

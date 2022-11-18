@@ -1,0 +1,13 @@
+{
+  "client": "Thunder Client",
+  "environmentName": "splitwise",
+  "dateExported": "2022-11-12T21:01:12.314Z",
+  "version": "1.0",
+  "variables": [
+    {
+      "name": "token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzZmODVmNDMwMjg2YzA2N2ZmYTliNDciLCJpYXQiOjE2NjgyODI2NDcsImV4cCI6MTY2ODI4NjI0N30.c33rRMPw2ruCJHdPSgcKibcwp2Dq7rVWsrbXiWAfxRk"
+    },
+    { "name": "baseurl", "value": "http://localhost:8000/api" }
+  ]
+}

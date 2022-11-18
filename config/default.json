@@ -1,0 +1,4 @@
+{
+    "jwtPrivateKey":"jwtPrivateKey",
+    "db":"mongodb+srv://avinash:Welcome2india@cluster0.cxxe2.mongodb.net/testdb1?retryWrites=true&w=majority"
+}
